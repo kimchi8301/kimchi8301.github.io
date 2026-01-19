@@ -6,7 +6,7 @@
     <title>Jihwan Kim | Application Architect</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,20 +15,21 @@
         }
 
         :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --bg-dark: #0f0f1a;
-            --bg-card: #1a1a2e;
-            --bg-card-hover: #252542;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent-green: #22c55e;
-            --accent-blue: #3b82f6;
-            --accent-purple: #a855f7;
-            --accent-orange: #f97316;
-            --gradient-1: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
-            --gradient-2: linear-gradient(135deg, #3b82f6 0%, #22c55e 100%);
-            --gradient-bright: linear-gradient(135deg, #a78bfa 0%, #f9a8d4 100%);
+            --primary: #00d9ff;
+            --primary-dark: #00b8d4;
+            --bg-dark: #0a0e27;
+            --bg-card: #141b33;
+            --bg-card-hover: #1a2440;
+            --text-primary: #e0e7ff;
+            --text-secondary: #8b93b8;
+            --accent-green: #00ff88;
+            --accent-blue: #00d9ff;
+            --accent-purple: #b794f6;
+            --accent-orange: #ffb86c;
+            --terminal-green: #00ff88;
+            --gradient-1: linear-gradient(135deg, #00d9ff 0%, #00ff88 100%);
+            --gradient-2: linear-gradient(135deg, #00d9ff 0%, #b794f6 100%);
+            --gradient-bright: linear-gradient(135deg, #00d9ff 0%, #00ff88 100%);
         }
 
         body {
@@ -37,6 +38,10 @@
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
         }
 
         /* Animated Background */
@@ -91,12 +96,12 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            padding: 120px 0;
+            padding: 60px 0 40px;
         }
 
         .hero-content {
@@ -108,23 +113,22 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 8px 16px;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            border-radius: 50px;
-            font-size: 14px;
-            color: var(--primary);
-            margin-bottom: 24px;
+            padding: 6px 14px;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid var(--terminal-green);
+            border-radius: 6px;
+            font-size: 13px;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--terminal-green);
+            margin-bottom: 20px;
             animation: fadeInUp 0.6s ease;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
         }
 
         .hero-badge::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background: var(--accent-green);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
+            content: '$';
+            font-weight: 600;
+            color: var(--terminal-green);
         }
 
         @keyframes pulse {
@@ -133,30 +137,45 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-size: clamp(2.5rem, 8vw, 4rem);
             font-weight: 700;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             background: var(--gradient-bright);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             animation: fadeInUp 0.6s ease 0.1s backwards;
+            text-shadow: 0 0 40px rgba(0, 217, 255, 0.3);
+        }
+
+        .hero h1::before {
+            content: '> ';
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--terminal-green);
+            opacity: 0.8;
         }
 
         .hero-title-sub {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-size: clamp(1rem, 3vw, 1.4rem);
             font-weight: 500;
-            color: var(--text-secondary);
-            margin-bottom: 24px;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-blue);
+            margin-bottom: 16px;
             animation: fadeInUp 0.6s ease 0.2s backwards;
         }
 
+        .hero-title-sub::before {
+            content: '// ';
+            color: var(--text-secondary);
+        }
+
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--text-secondary);
             max-width: 600px;
-            margin: 0 auto 40px;
+            margin: 0 auto 32px;
             animation: fadeInUp 0.6s ease 0.3s backwards;
+            line-height: 1.7;
         }
 
         @keyframes fadeInUp {
@@ -179,9 +198,9 @@
         }
 
         .btn {
-            padding: 14px 28px;
-            border-radius: 12px;
-            font-size: 16px;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 15px;
             font-weight: 500;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -192,24 +211,26 @@
 
         .btn-primary {
             background: var(--gradient-1);
-            color: white;
-            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+            color: var(--bg-dark);
+            box-shadow: 0 4px 20px rgba(0, 217, 255, 0.3);
+            border: 1px solid var(--accent-blue);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
+            box-shadow: 0 8px 30px rgba(0, 217, 255, 0.5);
         }
 
         .btn-secondary {
             background: var(--bg-card);
             color: var(--text-primary);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
         }
 
         .btn-secondary:hover {
             background: var(--bg-card-hover);
-            border-color: var(--primary);
+            border-color: var(--accent-blue);
+            box-shadow: 0 4px 16px rgba(0, 217, 255, 0.2);
         }
 
         /* Scroll Indicator */
@@ -234,32 +255,39 @@
 
         /* Section Styles */
         section {
-            padding: 100px 0;
+            padding: 50px 0;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
 
         .section-label {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--primary);
-            margin-bottom: 12px;
+            font-size: 13px;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: lowercase;
+            letter-spacing: 1px;
+            color: var(--terminal-green);
+            margin-bottom: 10px;
+        }
+
+        .section-label::before {
+            content: '$ ';
+            color: var(--accent-blue);
         }
 
         .section-title {
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
             font-weight: 700;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .section-desc {
             color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto;
+            font-size: 0.95rem;
         }
 
         /* Skills Section */
@@ -271,9 +299,9 @@
 
         .skill-card {
             background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            padding: 32px;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 8px;
+            padding: 24px;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -284,49 +312,69 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 3px;
+            width: 3px;
+            height: 100%;
             background: var(--gradient-1);
-            transform: scaleX(0);
-            transform-origin: left;
+            transform: scaleY(0);
+            transform-origin: top;
             transition: transform 0.3s ease;
         }
 
         .skill-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(99, 102, 241, 0.3);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 8px 32px rgba(0, 217, 255, 0.2);
+            background: var(--bg-card-hover);
         }
 
         .skill-card:hover::before {
-            transform: scaleX(1);
+            transform: scaleY(1);
         }
 
         .skill-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 16px;
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-            font-size: 24px;
+            margin-bottom: 16px;
+            font-size: 22px;
+            border: 1px solid;
         }
 
-        .skill-icon.cloud { background: rgba(59, 130, 246, 0.15); color: var(--accent-blue); }
-        .skill-icon.devops { background: rgba(34, 197, 94, 0.15); color: var(--accent-green); }
-        .skill-icon.backend { background: rgba(168, 85, 247, 0.15); color: var(--accent-purple); }
-        .skill-icon.frontend { background: rgba(249, 115, 22, 0.15); color: var(--accent-orange); }
+        .skill-icon.cloud {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+        .skill-icon.devops {
+            background: rgba(0, 255, 136, 0.1);
+            color: var(--terminal-green);
+            border-color: var(--terminal-green);
+        }
+        .skill-icon.backend {
+            background: rgba(183, 148, 246, 0.1);
+            color: var(--accent-purple);
+            border-color: var(--accent-purple);
+        }
+        .skill-icon.frontend {
+            background: rgba(255, 184, 108, 0.1);
+            color: var(--accent-orange);
+            border-color: var(--accent-orange);
+        }
 
         .skill-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 12px;
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            font-weight: 600;
         }
 
         .skill-card p {
             color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            line-height: 1.6;
         }
 
         .skill-tags {
@@ -336,30 +384,43 @@
         }
 
         .skill-tag {
-            padding: 6px 12px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 6px;
-            font-size: 13px;
-            color: var(--text-secondary);
+            padding: 4px 10px;
+            background: rgba(0, 217, 255, 0.08);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 4px;
+            font-size: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-blue);
         }
 
         /* Experience Section */
         .experience-card {
             background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 24px;
-            padding: 48px;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 8px;
+            padding: 32px;
             display: grid;
             grid-template-columns: 1fr 2fr;
-            gap: 48px;
+            gap: 32px;
             align-items: center;
+            position: relative;
+        }
+
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-1);
         }
 
         @media (max-width: 768px) {
             .experience-card {
                 grid-template-columns: 1fr;
-                padding: 32px;
-                gap: 32px;
+                padding: 24px;
+                gap: 24px;
             }
         }
 
@@ -368,38 +429,47 @@
         }
 
         .company-logo {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             background: var(--gradient-1);
-            border-radius: 20px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin: 0 auto 20px;
+            margin: 0 auto 16px;
+            border: 2px solid var(--accent-blue);
         }
 
         .company-name {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .company-role {
-            color: var(--primary);
+            color: var(--terminal-green);
             font-weight: 500;
-            margin-bottom: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            margin-bottom: 6px;
         }
 
         .company-period {
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .experience-details h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
+            font-size: 1.15rem;
+            margin-bottom: 16px;
+            color: var(--accent-blue);
+        }
+
+        .experience-details h3::before {
+            content: '# ';
+            color: var(--terminal-green);
         }
 
         .experience-list {
@@ -407,11 +477,12 @@
         }
 
         .experience-list li {
-            padding: 12px 0;
+            padding: 10px 0;
             padding-left: 28px;
             position: relative;
             color: var(--text-secondary);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+            font-size: 0.92rem;
         }
 
         .experience-list li:last-child {
@@ -419,10 +490,12 @@
         }
 
         .experience-list li::before {
-            content: '→';
+            content: '>';
             position: absolute;
             left: 0;
-            color: var(--primary);
+            color: var(--terminal-green);
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
         }
 
         /* Projects Section */
@@ -434,41 +507,43 @@
 
         .project-card {
             background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 8px;
             overflow: hidden;
             transition: all 0.3s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(0, 217, 255, 0.2);
+            border-color: var(--accent-blue);
         }
 
         .project-image {
-            height: 180px;
+            height: 150px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
+            font-size: 3.5rem;
         }
 
-        .project-image.app1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .project-image.app2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .project-image.app1 { background: linear-gradient(135deg, #00d9ff 0%, #00ff88 100%); }
+        .project-image.app2 { background: linear-gradient(135deg, #b794f6 0%, #00d9ff 100%); }
 
         .project-content {
-            padding: 24px;
+            padding: 20px;
         }
 
         .project-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
         }
 
         .project-card p {
             color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 16px;
+            font-size: 0.88rem;
+            margin-bottom: 14px;
+            line-height: 1.6;
         }
 
         .project-link {
@@ -488,8 +563,9 @@
         /* Contact Section */
         .contact-section {
             background: var(--bg-card);
-            border-radius: 32px;
-            padding: 80px 48px;
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 8px;
+            padding: 50px 40px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -503,19 +579,20 @@
             width: 100%;
             height: 100%;
             background: var(--gradient-1);
-            opacity: 0.05;
+            opacity: 0.03;
         }
 
         .contact-section h2 {
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
-            margin-bottom: 16px;
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            margin-bottom: 12px;
             position: relative;
         }
 
         .contact-section p {
             color: var(--text-secondary);
-            margin-bottom: 32px;
+            margin-bottom: 28px;
             position: relative;
+            font-size: 0.95rem;
         }
 
         .contact-links {
@@ -530,19 +607,21 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 16px 24px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
+            padding: 12px 20px;
+            background: rgba(0, 217, 255, 0.08);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 6px;
             color: var(--text-primary);
             text-decoration: none;
             transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
 
         .contact-link:hover {
-            background: rgba(99, 102, 241, 0.1);
-            border-color: var(--primary);
+            background: rgba(0, 217, 255, 0.15);
+            border-color: var(--accent-blue);
             transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0, 217, 255, 0.2);
         }
 
         .contact-link svg {
@@ -553,9 +632,20 @@
         /* Footer */
         footer {
             text-align: center;
-            padding: 40px 0;
+            padding: 30px 0;
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+        }
+
+        footer::before {
+            content: '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━';
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 600px;
+            color: rgba(0, 217, 255, 0.2);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            overflow: hidden;
         }
 
         /* Responsive */
@@ -572,7 +662,7 @@
             }
 
             .contact-section {
-                padding: 48px 24px;
+                padding: 36px 24px;
             }
         }
     </style>
@@ -585,9 +675,9 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">Available for collaboration</div>
+                <div class="hero-badge">status: available</div>
                 <h1>Jihwan Kim</h1>
-                <p class="hero-title-sub">Application Architect</p>
+                <p class="hero-title-sub">DevOps & Cloud Architect</p>
                 <p>Designing stability and scalability of global services through enterprise cloud infrastructure and DevOps automation. Passionate about AWS, Kubernetes, and CI/CD pipeline optimization.</p>
                 <div class="hero-cta">
                     <a href="https://github.com/kimchi8301" class="btn btn-primary">
@@ -610,7 +700,7 @@
     <section id="skills">
         <div class="container">
             <div class="section-header">
-                <p class="section-label">Expertise</p>
+                <p class="section-label">cat ~/skills</p>
                 <h2 class="section-title">Tech Stack</h2>
                 <p class="section-desc">Designing and operating global-scale enterprise systems</p>
             </div>
@@ -668,7 +758,7 @@
     <section id="experience">
         <div class="container">
             <div class="section-header">
-                <p class="section-label">Career</p>
+                <p class="section-label">ls ~/experience</p>
                 <h2 class="section-title">Experience</h2>
             </div>
             <div class="experience-card">
@@ -697,7 +787,7 @@
     <section id="projects">
         <div class="container">
             <div class="section-header">
-                <p class="section-label">Side Projects</p>
+                <p class="section-label">git log --personal</p>
                 <h2 class="section-title">Personal Projects</h2>
                 <p class="section-desc">Apps I've built in my spare time</p>
             </div>

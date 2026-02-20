@@ -107,12 +107,12 @@
         <!-- Korean -->
         <div id="ko" class="section active">
             <h1>QuizLock 개인정보처리방침</h1>
-            <p class="date">시행일: 2025년 1월 17일</p>
+            <p class="date">시행일: 2025년 1월 17일 | 최종 수정일: 2025년 2월 21일</p>
 
             <p>QuizLock(이하 "앱")는 사용자의 개인정보를 소중히 여기며, 관련 법규를 준수합니다. 본 개인정보처리방침은 앱이 수집하는 정보와 그 사용 방법을 설명합니다.</p>
 
             <h2>1. 수집하는 정보</h2>
-            
+
             <h3>1.1 자동 수집 정보</h3>
             <ul>
                 <li><strong>앱 사용 시간 데이터:</strong> 스마트폰 사용 시간을 측정하기 위해 기기의 앱 사용 통계에 접근합니다. 이 정보는 기기에만 저장됩니다.</li>
@@ -121,13 +121,25 @@
             <h3>1.2 사용자 제공 정보</h3>
             <ul>
                 <li><strong>설정 정보:</strong> 사용자가 설정한 사용 시간, 퀴즈 난이도, 연령대 등의 정보</li>
-                <li><strong>반성 사진:</strong> 잠금 화면에서 촬영되는 사진 (기기에만 저장, 외부 전송 없음)</li>
+
             </ul>
 
-            <h3>1.3 수집하지 않는 정보</h3>
+            <h3>1.3 기술적 정보 및 앱 권한</h3>
+            <p>앱은 핵심 기능을 제공하기 위해 다음과 같은 기기 권한을 사용합니다:</p>
+            <ul>
+                <li><strong>사용 정보 접근 (PACKAGE_USAGE_STATS):</strong> 앱 사용 시간 측정</li>
+
+                <li><strong>다른 앱 위에 표시 (SYSTEM_ALERT_WINDOW):</strong> 잠금 화면 및 퀴즈 오버레이 표시</li>
+                <li><strong>부팅 시 실행 (RECEIVE_BOOT_COMPLETED):</strong> 기기 재부팅 후 사용 시간 모니터링 자동 재시작</li>
+                <li><strong>포그라운드 서비스 (FOREGROUND_SERVICE):</strong> 백그라운드에서 사용 시간 모니터링 유지</li>
+                <li><strong>인터넷 (INTERNET):</strong> 퀴즈 데이터 로딩 및 광고 표시</li>
+                <li><strong>네트워크 상태 (ACCESS_NETWORK_STATE):</strong> 네트워크 연결 상태 확인</li>
+            </ul>
+
+            <h3>1.4 수집하지 않는 정보</h3>
             <ul>
                 <li>이름, 이메일, 전화번호 등 개인 식별 정보</li>
-                <li>위치 정보</li>
+                <li>GPS 기반 위치 정보</li>
                 <li>연락처, 메시지 내용</li>
             </ul>
 
@@ -136,24 +148,29 @@
                 <li>스마트폰 사용 시간 측정 및 표시</li>
                 <li>설정된 시간 초과 시 퀴즈 제공</li>
                 <li>사용자 설정 저장 및 유지</li>
+                <li>앱 성능 개선 및 안정성 유지</li>
             </ul>
 
             <h2>3. 정보 저장 위치</h2>
             <ul>
-                <li><strong>기기 내 저장:</strong> 모든 개인 데이터(사용 시간, 설정, 반성 사진)는 사용자의 기기에만 저장됩니다.</li>
+                <li><strong>기기 내 저장:</strong> 모든 개인 데이터(사용 시간, 설정 등)는 사용자의 기기에만 저장됩니다.</li>
                 <li><strong>서버 저장:</strong> 퀴즈 문제 데이터만 서버에서 불러옵니다. 사용자 개인정보는 서버에 저장되지 않습니다.</li>
             </ul>
 
             <h2>4. 제3자 서비스</h2>
-            
+
             <h3>4.1 광고 서비스 (Google AdMob)</h3>
             <p>앱은 Google AdMob을 통해 광고를 표시합니다. AdMob은 다음 정보를 수집할 수 있습니다:</p>
             <ul>
-                <li>기기 식별자</li>
-                <li>광고 상호작용 데이터</li>
+                <li>광고 ID (Google Advertising ID)</li>
+                <li>기기 식별자 및 기기 정보 (모델, OS 버전 등)</li>
+                <li>IP 주소 (대략적 위치 추정에 사용될 수 있음)</li>
+                <li>광고 상호작용 데이터 (클릭, 노출 등)</li>
+                <li>앱 활동 데이터</li>
             </ul>
             <p>아동 사용자의 경우, COPPA 정책에 따라 개인화된 광고가 제한됩니다.</p>
             <p>자세한 내용: <a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a></p>
+            <p>Google의 광고 데이터 사용 방법: <a href="https://policies.google.com/technologies/ads" target="_blank">Google 광고 정책</a></p>
 
             <h2>5. 데이터 보안</h2>
             <p>앱은 사용자 데이터를 보호하기 위해 다음과 같은 조치를 취합니다:</p>
@@ -163,7 +180,14 @@
                 <li>암호화된 데이터 저장</li>
             </ul>
 
-            <h2>6. 아동 개인정보 보호</h2>
+            <h2>6. 데이터 보존 및 삭제</h2>
+            <ul>
+                <li>기기 내 저장 데이터: 앱을 삭제하면 즉시 모든 데이터가 삭제됩니다.</li>
+                <li>제3자 서비스(AdMob)에서 수집한 데이터: 해당 서비스의 보존 정책에 따릅니다. 자세한 내용은 <a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a>을 참고하세요.</li>
+                <li>서버 측 데이터: 퀴즈 문제 요청 시 발생하는 네트워크 로그는 보안 및 서비스 안정성 목적으로 최대 90일간 보존 후 자동 삭제됩니다.</li>
+            </ul>
+
+            <h2>7. 아동 개인정보 보호</h2>
             <p>앱은 아동 사용자를 대상으로 할 수 있으며, COPPA(아동 온라인 개인정보 보호법) 및 관련 법규를 준수합니다:</p>
             <ul>
                 <li>아동의 개인 식별 정보를 수집하지 않습니다</li>
@@ -171,32 +195,33 @@
                 <li>부모 또는 보호자가 앱 설정을 관리할 수 있습니다</li>
             </ul>
 
-            <h2>7. 사용자 권리</h2>
+            <h2>8. 사용자 권리</h2>
             <ul>
                 <li><strong>데이터 삭제:</strong> 앱을 삭제하면 기기에 저장된 모든 데이터가 삭제됩니다.</li>
                 <li><strong>설정 초기화:</strong> 앱 내 설정에서 데이터를 초기화할 수 있습니다.</li>
+                <li><strong>광고 ID 재설정:</strong> 기기 설정에서 Google 광고 ID를 재설정하거나 개인화된 광고를 비활성화할 수 있습니다.</li>
             </ul>
 
-            <h2>8. 개인정보처리방침 변경</h2>
+            <h2>9. 개인정보처리방침 변경</h2>
             <p>본 방침이 변경될 경우, 앱 내 공지 또는 본 페이지를 통해 안내드립니다. 중요한 변경사항은 시행 전 사전 고지합니다.</p>
 
-            <h2>9. 문의</h2>
+            <h2>10. 문의</h2>
             <div class="contact">
                 <p>개인정보 관련 문의사항이 있으시면 아래로 연락해 주세요:</p>
                 <p><strong>이메일:</strong> kimchi830@gmail.com</p>
-                <p><strong>개발사:</strong> jiwhan.kim</p>
+                <p><strong>개발자:</strong> jiwhan.kim</p>
             </div>
         </div>
 
         <!-- English -->
         <div id="en" class="section">
             <h1>QuizLock Privacy Policy</h1>
-            <p class="date">Effective Date: January 17, 2025</p>
+            <p class="date">Effective Date: January 17, 2025 | Last Updated: February 21, 2025</p>
 
             <p>QuizLock ("App") values your privacy and complies with applicable regulations. This Privacy Policy explains what information we collect and how we use it.</p>
 
             <h2>1. Information We Collect</h2>
-            
+
             <h3>1.1 Automatically Collected Information</h3>
             <ul>
                 <li><strong>App Usage Data:</strong> We access device app usage statistics to measure smartphone usage time. This information is stored only on your device.</li>
@@ -205,13 +230,25 @@
             <h3>1.2 User-Provided Information</h3>
             <ul>
                 <li><strong>Settings:</strong> Usage time limits, quiz difficulty, age group preferences</li>
-                <li><strong>Reflection Photos:</strong> Photos taken on lock screen (stored locally only, never transmitted)</li>
+
             </ul>
 
-            <h3>1.3 Information We Don't Collect</h3>
+            <h3>1.3 Technical Information and App Permissions</h3>
+            <p>The App uses the following device permissions to provide its core features:</p>
+            <ul>
+                <li><strong>Usage Access (PACKAGE_USAGE_STATS):</strong> Measuring app usage time</li>
+
+                <li><strong>Display Over Other Apps (SYSTEM_ALERT_WINDOW):</strong> Showing lock screen and quiz overlays</li>
+                <li><strong>Run at Startup (RECEIVE_BOOT_COMPLETED):</strong> Auto-restarting usage monitoring after device reboot</li>
+                <li><strong>Foreground Service (FOREGROUND_SERVICE):</strong> Maintaining usage monitoring in the background</li>
+                <li><strong>Internet (INTERNET):</strong> Loading quiz data and displaying ads</li>
+                <li><strong>Network State (ACCESS_NETWORK_STATE):</strong> Checking network connectivity</li>
+            </ul>
+
+            <h3>1.4 Information We Don't Collect</h3>
             <ul>
                 <li>Personal identification information (name, email, phone number)</li>
-                <li>Location data</li>
+                <li>GPS-based location data</li>
                 <li>Contacts or message content</li>
             </ul>
 
@@ -220,24 +257,29 @@
                 <li>Measuring and displaying smartphone usage time</li>
                 <li>Providing quizzes when time limits are exceeded</li>
                 <li>Saving and maintaining user settings</li>
+                <li>Improving app performance and stability</li>
             </ul>
 
             <h2>3. Data Storage</h2>
             <ul>
-                <li><strong>On-Device Storage:</strong> All personal data (usage time, settings, photos) is stored only on your device.</li>
+                <li><strong>On-Device Storage:</strong> All personal data (usage time, settings) is stored only on your device.</li>
                 <li><strong>Server Storage:</strong> Only quiz question data is retrieved from servers. No personal information is stored on servers.</li>
             </ul>
 
             <h2>4. Third-Party Services</h2>
-            
+
             <h3>4.1 Advertising (Google AdMob)</h3>
             <p>The App displays ads through Google AdMob. AdMob may collect:</p>
             <ul>
-                <li>Device identifiers</li>
-                <li>Ad interaction data</li>
+                <li>Advertising ID (Google Advertising ID)</li>
+                <li>Device identifiers and device information (model, OS version, etc.)</li>
+                <li>IP address (may be used for approximate location estimation)</li>
+                <li>Ad interaction data (clicks, impressions, etc.)</li>
+                <li>App activity data</li>
             </ul>
             <p>For child users, personalized advertising is restricted per COPPA policy.</p>
             <p>More info: <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></p>
+            <p>How Google uses advertising data: <a href="https://policies.google.com/technologies/ads" target="_blank">Google Ads Policy</a></p>
 
             <h2>5. Data Security</h2>
             <p>We protect your data through:</p>
@@ -247,7 +289,14 @@
                 <li>Encrypted data storage</li>
             </ul>
 
-            <h2>6. Children's Privacy</h2>
+            <h2>6. Data Retention and Deletion</h2>
+            <ul>
+                <li>On-device data: All data is deleted immediately when the app is uninstalled.</li>
+                <li>Third-party service (AdMob) data: Subject to the respective service's retention policy. See <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a> for details.</li>
+                <li>Server-side data: Network logs from quiz data requests are retained for up to 90 days for security and service stability, then automatically deleted.</li>
+            </ul>
+
+            <h2>7. Children's Privacy</h2>
             <p>The App may be used by children and complies with COPPA:</p>
             <ul>
                 <li>We do not collect personal identification information from children</li>
@@ -255,16 +304,17 @@
                 <li>Parents or guardians can manage app settings</li>
             </ul>
 
-            <h2>7. Your Rights</h2>
+            <h2>8. Your Rights</h2>
             <ul>
                 <li><strong>Data Deletion:</strong> Uninstalling the app deletes all locally stored data.</li>
                 <li><strong>Reset Settings:</strong> You can reset data within the app settings.</li>
+                <li><strong>Ad ID Reset:</strong> You can reset your Google Advertising ID or opt out of personalized ads in your device settings.</li>
             </ul>
 
-            <h2>8. Policy Changes</h2>
+            <h2>9. Policy Changes</h2>
             <p>If this policy changes, we will notify you through the app or this page. Significant changes will be announced before implementation.</p>
 
-            <h2>9. Contact Us</h2>
+            <h2>10. Contact Us</h2>
             <div class="contact">
                 <p>For privacy-related inquiries:</p>
                 <p><strong>Email:</strong> kimchi830@gmail.com</p>
@@ -275,12 +325,12 @@
         <!-- Japanese -->
         <div id="ja" class="section">
             <h1>QuizLock プライバシーポリシー</h1>
-            <p class="date">施行日：2025年1月17日</p>
+            <p class="date">施行日：2025年1月17日 | 最終更新日：2025年2月21日</p>
 
             <p>QuizLock（以下「アプリ」）は、ユーザーのプライバシーを尊重し、関連法規を遵守します。本プライバシーポリシーは、アプリが収集する情報とその使用方法について説明します。</p>
 
             <h2>1. 収集する情報</h2>
-            
+
             <h3>1.1 自動収集情報</h3>
             <ul>
                 <li><strong>アプリ使用時間データ：</strong>スマートフォンの使用時間を測定するために、デバイスのアプリ使用統計にアクセスします。この情報はデバイスにのみ保存されます。</li>
@@ -289,13 +339,25 @@
             <h3>1.2 ユーザー提供情報</h3>
             <ul>
                 <li><strong>設定情報：</strong>使用時間、クイズ難易度、年齢層などの設定</li>
-                <li><strong>反省写真：</strong>ロック画面で撮影される写真（デバイスにのみ保存、外部送信なし）</li>
+
             </ul>
 
-            <h3>1.3 収集しない情報</h3>
+            <h3>1.3 技術情報およびアプリ権限</h3>
+            <p>アプリは主要機能を提供するために、以下のデバイス権限を使用します：</p>
+            <ul>
+                <li><strong>使用状況へのアクセス (PACKAGE_USAGE_STATS)：</strong>アプリ使用時間の測定</li>
+
+                <li><strong>他のアプリの上に表示 (SYSTEM_ALERT_WINDOW)：</strong>ロック画面およびクイズオーバーレイの表示</li>
+                <li><strong>起動時に実行 (RECEIVE_BOOT_COMPLETED)：</strong>デバイス再起動後の使用時間モニタリング自動再開</li>
+                <li><strong>フォアグラウンドサービス (FOREGROUND_SERVICE)：</strong>バックグラウンドでの使用時間モニタリング維持</li>
+                <li><strong>インターネット (INTERNET)：</strong>クイズデータの読み込みおよび広告表示</li>
+                <li><strong>ネットワーク状態 (ACCESS_NETWORK_STATE)：</strong>ネットワーク接続状態の確認</li>
+            </ul>
+
+            <h3>1.4 収集しない情報</h3>
             <ul>
                 <li>氏名、メールアドレス、電話番号などの個人識別情報</li>
-                <li>位置情報</li>
+                <li>GPS基づく位置情報</li>
                 <li>連絡先、メッセージ内容</li>
             </ul>
 
@@ -304,24 +366,29 @@
                 <li>スマートフォン使用時間の測定と表示</li>
                 <li>設定時間超過時のクイズ提供</li>
                 <li>ユーザー設定の保存と維持</li>
+                <li>アプリのパフォーマンス改善と安定性維持</li>
             </ul>
 
             <h2>3. データの保存場所</h2>
             <ul>
-                <li><strong>デバイス内保存：</strong>すべての個人データ（使用時間、設定、反省写真）はユーザーのデバイスにのみ保存されます。</li>
+                <li><strong>デバイス内保存：</strong>すべての個人データ（使用時間、設定など）はユーザーのデバイスにのみ保存されます。</li>
                 <li><strong>サーバー保存：</strong>クイズ問題データのみサーバーから取得します。ユーザーの個人情報はサーバーに保存されません。</li>
             </ul>
 
             <h2>4. 第三者サービス</h2>
-            
+
             <h3>4.1 広告サービス（Google AdMob）</h3>
             <p>アプリはGoogle AdMobを通じて広告を表示します。AdMobは以下の情報を収集する場合があります：</p>
             <ul>
-                <li>デバイス識別子</li>
-                <li>広告インタラクションデータ</li>
+                <li>広告ID（Google Advertising ID）</li>
+                <li>デバイス識別子およびデバイス情報（モデル、OSバージョンなど）</li>
+                <li>IPアドレス（おおよその位置推定に使用される場合があります）</li>
+                <li>広告インタラクションデータ（クリック、表示など）</li>
+                <li>アプリアクティビティデータ</li>
             </ul>
             <p>お子様ユーザーの場合、COPPAポリシーに従ってパーソナライズ広告が制限されます。</p>
             <p>詳細：<a href="https://policies.google.com/privacy" target="_blank">Googleプライバシーポリシー</a></p>
+            <p>Googleの広告データ使用方法：<a href="https://policies.google.com/technologies/ads" target="_blank">Google広告ポリシー</a></p>
 
             <h2>5. データセキュリティ</h2>
             <p>アプリは以下の方法でユーザーデータを保護します：</p>
@@ -331,7 +398,14 @@
                 <li>暗号化されたデータ保存</li>
             </ul>
 
-            <h2>6. お子様のプライバシー保護</h2>
+            <h2>6. データの保持と削除</h2>
+            <ul>
+                <li>デバイス内データ：アプリを削除すると、すべてのデータが直ちに削除されます。</li>
+                <li>第三者サービス（AdMob）のデータ：該当サービスの保持ポリシーに従います。詳細は<a href="https://policies.google.com/privacy" target="_blank">Googleプライバシーポリシー</a>をご覧ください。</li>
+                <li>サーバー側データ：クイズデータリクエスト時に発生するネットワークログは、セキュリティおよびサービス安定性のため最大90日間保持後、自動削除されます。</li>
+            </ul>
+
+            <h2>7. お子様のプライバシー保護</h2>
             <p>アプリはお子様ユーザーを対象とする場合があり、COPPA（児童オンラインプライバシー保護法）を遵守します：</p>
             <ul>
                 <li>お子様の個人識別情報を収集しません</li>
@@ -339,16 +413,17 @@
                 <li>保護者がアプリ設定を管理できます</li>
             </ul>
 
-            <h2>7. ユーザーの権利</h2>
+            <h2>8. ユーザーの権利</h2>
             <ul>
                 <li><strong>データ削除：</strong>アプリを削除すると、デバイスに保存されたすべてのデータが削除されます。</li>
                 <li><strong>設定リセット：</strong>アプリ内の設定でデータをリセットできます。</li>
+                <li><strong>広告IDリセット：</strong>デバイス設定でGoogle広告IDをリセットまたはパーソナライズ広告を無効にできます。</li>
             </ul>
 
-            <h2>8. プライバシーポリシーの変更</h2>
+            <h2>9. プライバシーポリシーの変更</h2>
             <p>本ポリシーが変更される場合、アプリ内のお知らせまたは本ページを通じてご案内します。重要な変更は施行前に事前告知します。</p>
 
-            <h2>9. お問い合わせ</h2>
+            <h2>10. お問い合わせ</h2>
             <div class="contact">
                 <p>プライバシーに関するお問い合わせ：</p>
                 <p><strong>メール：</strong> kimchi830@gmail.com</p>
@@ -359,12 +434,12 @@
         <!-- Chinese -->
         <div id="zh" class="section">
             <h1>QuizLock 隐私政策</h1>
-            <p class="date">生效日期：2025年1月17日</p>
+            <p class="date">生效日期：2025年1月17日 | 最后更新：2025年2月21日</p>
 
             <p>QuizLock（以下简称"应用"）重视您的隐私，并遵守相关法规。本隐私政策说明应用收集的信息及其使用方式。</p>
 
             <h2>1. 我们收集的信息</h2>
-            
+
             <h3>1.1 自动收集的信息</h3>
             <ul>
                 <li><strong>应用使用时间数据：</strong>为了测量智能手机使用时间，我们会访问设备的应用使用统计。此信息仅存储在您的设备上。</li>
@@ -373,13 +448,25 @@
             <h3>1.2 用户提供的信息</h3>
             <ul>
                 <li><strong>设置信息：</strong>使用时间限制、测验难度、年龄段等设置</li>
-                <li><strong>反思照片：</strong>在锁屏界面拍摄的照片（仅本地存储，不会外传）</li>
+
             </ul>
 
-            <h3>1.3 我们不收集的信息</h3>
+            <h3>1.3 技术信息和应用权限</h3>
+            <p>应用使用以下设备权限来提供核心功能：</p>
+            <ul>
+                <li><strong>使用情况访问 (PACKAGE_USAGE_STATS)：</strong>测量应用使用时间</li>
+
+                <li><strong>悬浮窗 (SYSTEM_ALERT_WINDOW)：</strong>显示锁屏和测验覆盖层</li>
+                <li><strong>开机启动 (RECEIVE_BOOT_COMPLETED)：</strong>设备重启后自动重新启动使用时间监控</li>
+                <li><strong>前台服务 (FOREGROUND_SERVICE)：</strong>在后台维持使用时间监控</li>
+                <li><strong>网络 (INTERNET)：</strong>加载测验数据和显示广告</li>
+                <li><strong>网络状态 (ACCESS_NETWORK_STATE)：</strong>检查网络连接状态</li>
+            </ul>
+
+            <h3>1.4 我们不收集的信息</h3>
             <ul>
                 <li>姓名、电子邮件、电话号码等个人身份信息</li>
-                <li>位置信息</li>
+                <li>GPS位置信息</li>
                 <li>联系人、消息内容</li>
             </ul>
 
@@ -388,24 +475,29 @@
                 <li>测量和显示智能手机使用时间</li>
                 <li>超过设定时间时提供测验</li>
                 <li>保存和维护用户设置</li>
+                <li>改善应用性能和稳定性</li>
             </ul>
 
             <h2>3. 数据存储位置</h2>
             <ul>
-                <li><strong>设备存储：</strong>所有个人数据（使用时间、设置、反思照片）仅存储在用户设备上。</li>
+                <li><strong>设备存储：</strong>所有个人数据（使用时间、设置等）仅存储在用户设备上。</li>
                 <li><strong>服务器存储：</strong>仅从服务器获取测验题目数据。用户个人信息不会存储在服务器上。</li>
             </ul>
 
             <h2>4. 第三方服务</h2>
-            
+
             <h3>4.1 广告服务（Google AdMob）</h3>
             <p>应用通过Google AdMob展示广告。AdMob可能收集：</p>
             <ul>
-                <li>设备标识符</li>
-                <li>广告互动数据</li>
+                <li>广告ID（Google Advertising ID）</li>
+                <li>设备标识符和设备信息（型号、操作系统版本等）</li>
+                <li>IP地址（可能用于大致位置估算）</li>
+                <li>广告互动数据（点击、展示等）</li>
+                <li>应用活动数据</li>
             </ul>
             <p>对于儿童用户，根据COPPA政策限制个性化广告。</p>
             <p>更多信息：<a href="https://policies.google.com/privacy" target="_blank">Google隐私政策</a></p>
+            <p>Google如何使用广告数据：<a href="https://policies.google.com/technologies/ads" target="_blank">Google广告政策</a></p>
 
             <h2>5. 数据安全</h2>
             <p>应用通过以下方式保护您的数据：</p>
@@ -415,7 +507,14 @@
                 <li>加密数据存储</li>
             </ul>
 
-            <h2>6. 儿童隐私保护</h2>
+            <h2>6. 数据保留和删除</h2>
+            <ul>
+                <li>设备内数据：卸载应用后，所有数据将立即删除。</li>
+                <li>第三方服务（AdMob）数据：遵循相应服务的保留政策。详情请参阅<a href="https://policies.google.com/privacy" target="_blank">Google隐私政策</a>。</li>
+                <li>服务器端数据：测验数据请求产生的网络日志出于安全和服务稳定性目的最多保留90天，之后自动删除。</li>
+            </ul>
+
+            <h2>7. 儿童隐私保护</h2>
             <p>应用可能面向儿童用户，并遵守COPPA（儿童在线隐私保护法）：</p>
             <ul>
                 <li>我们不收集儿童的个人身份信息</li>
@@ -423,16 +522,17 @@
                 <li>家长或监护人可以管理应用设置</li>
             </ul>
 
-            <h2>7. 用户权利</h2>
+            <h2>8. 用户权利</h2>
             <ul>
                 <li><strong>数据删除：</strong>卸载应用将删除设备上存储的所有数据。</li>
                 <li><strong>重置设置：</strong>您可以在应用设置中重置数据。</li>
+                <li><strong>广告ID重置：</strong>您可以在设备设置中重置Google广告ID或禁用个性化广告。</li>
             </ul>
 
-            <h2>8. 隐私政策变更</h2>
+            <h2>9. 隐私政策变更</h2>
             <p>如本政策发生变更，我们将通过应用内通知或本页面告知您。重大变更将在实施前提前通知。</p>
 
-            <h2>9. 联系我们</h2>
+            <h2>10. 联系我们</h2>
             <div class="contact">
                 <p>如有隐私相关问题，请联系：</p>
                 <p><strong>电子邮件：</strong> kimchi830@gmail.com</p>
@@ -443,12 +543,12 @@
         <!-- Spanish -->
         <div id="es" class="section">
             <h1>Política de Privacidad de QuizLock</h1>
-            <p class="date">Fecha de vigencia: 17 de enero de 2025</p>
+            <p class="date">Fecha de vigencia: 17 de enero de 2025 | Última actualización: 21 de febrero de 2025</p>
 
             <p>QuizLock ("Aplicación") valora su privacidad y cumple con las regulaciones aplicables. Esta Política de Privacidad explica qué información recopilamos y cómo la utilizamos.</p>
 
             <h2>1. Información que Recopilamos</h2>
-            
+
             <h3>1.1 Información Recopilada Automáticamente</h3>
             <ul>
                 <li><strong>Datos de Uso de la Aplicación:</strong> Accedemos a las estadísticas de uso de aplicaciones del dispositivo para medir el tiempo de uso del smartphone. Esta información se almacena solo en su dispositivo.</li>
@@ -457,13 +557,25 @@
             <h3>1.2 Información Proporcionada por el Usuario</h3>
             <ul>
                 <li><strong>Configuraciones:</strong> Límites de tiempo de uso, dificultad del cuestionario, preferencias de grupo de edad</li>
-                <li><strong>Fotos de Reflexión:</strong> Fotos tomadas en la pantalla de bloqueo (almacenadas localmente, nunca transmitidas)</li>
+
             </ul>
 
-            <h3>1.3 Información que No Recopilamos</h3>
+            <h3>1.3 Información Técnica y Permisos de la Aplicación</h3>
+            <p>La aplicación utiliza los siguientes permisos del dispositivo para proporcionar sus funciones principales:</p>
+            <ul>
+                <li><strong>Acceso de Uso (PACKAGE_USAGE_STATS):</strong> Medición del tiempo de uso de aplicaciones</li>
+
+                <li><strong>Mostrar sobre otras apps (SYSTEM_ALERT_WINDOW):</strong> Mostrar pantalla de bloqueo y superposiciones de cuestionarios</li>
+                <li><strong>Ejecutar al inicio (RECEIVE_BOOT_COMPLETED):</strong> Reinicio automático del monitoreo después del reinicio del dispositivo</li>
+                <li><strong>Servicio en primer plano (FOREGROUND_SERVICE):</strong> Mantener el monitoreo de uso en segundo plano</li>
+                <li><strong>Internet (INTERNET):</strong> Carga de datos de cuestionarios y visualización de anuncios</li>
+                <li><strong>Estado de red (ACCESS_NETWORK_STATE):</strong> Verificación de conectividad de red</li>
+            </ul>
+
+            <h3>1.4 Información que No Recopilamos</h3>
             <ul>
                 <li>Información de identificación personal (nombre, correo electrónico, número de teléfono)</li>
-                <li>Datos de ubicación</li>
+                <li>Datos de ubicación GPS</li>
                 <li>Contactos o contenido de mensajes</li>
             </ul>
 
@@ -472,6 +584,7 @@
                 <li>Medir y mostrar el tiempo de uso del smartphone</li>
                 <li>Proporcionar cuestionarios cuando se exceden los límites de tiempo</li>
                 <li>Guardar y mantener la configuración del usuario</li>
+                <li>Mejorar el rendimiento y la estabilidad de la aplicación</li>
             </ul>
 
             <h2>3. Almacenamiento de Datos</h2>
@@ -481,10 +594,19 @@
             </ul>
 
             <h2>4. Servicios de Terceros</h2>
-            
+
             <h3>4.1 Publicidad (Google AdMob)</h3>
-            <p>La aplicación muestra anuncios a través de Google AdMob. Para usuarios menores, la publicidad personalizada está restringida según la política COPPA.</p>
+            <p>La aplicación muestra anuncios a través de Google AdMob. AdMob puede recopilar:</p>
+            <ul>
+                <li>ID de publicidad (Google Advertising ID)</li>
+                <li>Identificadores del dispositivo e información del dispositivo (modelo, versión del SO, etc.)</li>
+                <li>Dirección IP (puede usarse para estimación aproximada de ubicación)</li>
+                <li>Datos de interacción con anuncios (clics, impresiones, etc.)</li>
+                <li>Datos de actividad de la aplicación</li>
+            </ul>
+            <p>Para usuarios menores, la publicidad personalizada está restringida según la política COPPA.</p>
             <p>Más información: <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidad de Google</a></p>
+            <p>Cómo Google utiliza los datos publicitarios: <a href="https://policies.google.com/technologies/ads" target="_blank">Política de Anuncios de Google</a></p>
 
             <h2>5. Seguridad de Datos</h2>
             <ul>
@@ -493,16 +615,32 @@
                 <li>Almacenamiento de datos encriptado</li>
             </ul>
 
-            <h2>6. Privacidad de los Niños</h2>
-            <p>La aplicación cumple con COPPA. No recopilamos información de identificación personal de niños y los anuncios mostrados a niños no están personalizados.</p>
+            <h2>6. Retención y Eliminación de Datos</h2>
+            <ul>
+                <li>Datos en el dispositivo: Todos los datos se eliminan inmediatamente al desinstalar la aplicación.</li>
+                <li>Datos de servicios de terceros (AdMob): Sujetos a la política de retención del servicio respectivo. Consulte la <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidad de Google</a> para más detalles.</li>
+                <li>Datos del servidor: Los registros de red de las solicitudes de datos de cuestionarios se conservan hasta 90 días por seguridad y estabilidad del servicio, luego se eliminan automáticamente.</li>
+            </ul>
 
-            <h2>7. Sus Derechos</h2>
+            <h2>7. Privacidad de los Niños</h2>
+            <p>La aplicación cumple con COPPA:</p>
+            <ul>
+                <li>No recopilamos información de identificación personal de niños</li>
+                <li>Los anuncios mostrados a niños no están personalizados</li>
+                <li>Los padres o tutores pueden gestionar la configuración de la aplicación</li>
+            </ul>
+
+            <h2>8. Sus Derechos</h2>
             <ul>
                 <li><strong>Eliminación de Datos:</strong> Desinstalar la aplicación elimina todos los datos almacenados localmente.</li>
                 <li><strong>Restablecer Configuración:</strong> Puede restablecer los datos dentro de la configuración de la aplicación.</li>
+                <li><strong>Restablecer ID de Publicidad:</strong> Puede restablecer su ID de publicidad de Google o desactivar los anuncios personalizados en la configuración de su dispositivo.</li>
             </ul>
 
-            <h2>8. Contacto</h2>
+            <h2>9. Cambios en la Política</h2>
+            <p>Si esta política cambia, le notificaremos a través de la aplicación o esta página. Los cambios significativos se anunciarán antes de su implementación.</p>
+
+            <h2>10. Contacto</h2>
             <div class="contact">
                 <p><strong>Correo electrónico:</strong> kimchi830@gmail.com</p>
                 <p><strong>Desarrollador:</strong> jiwhan.kim</p>
@@ -512,12 +650,12 @@
         <!-- German -->
         <div id="de" class="section">
             <h1>QuizLock Datenschutzrichtlinie</h1>
-            <p class="date">Gültig ab: 17. Januar 2025</p>
+            <p class="date">Gültig ab: 17. Januar 2025 | Letzte Aktualisierung: 21. Februar 2025</p>
 
             <p>QuizLock ("App") schätzt Ihre Privatsphäre und hält sich an geltende Vorschriften. Diese Datenschutzrichtlinie erklärt, welche Informationen wir sammeln und wie wir sie verwenden.</p>
 
             <h2>1. Informationen, die wir sammeln</h2>
-            
+
             <h3>1.1 Automatisch gesammelte Informationen</h3>
             <ul>
                 <li><strong>App-Nutzungsdaten:</strong> Wir greifen auf Gerätenutzungsstatistiken zu, um die Smartphone-Nutzungszeit zu messen. Diese Informationen werden nur auf Ihrem Gerät gespeichert.</li>
@@ -526,13 +664,25 @@
             <h3>1.2 Vom Benutzer bereitgestellte Informationen</h3>
             <ul>
                 <li><strong>Einstellungen:</strong> Nutzungszeitlimits, Quiz-Schwierigkeit, Altersgruppenpräferenzen</li>
-                <li><strong>Reflexionsfotos:</strong> Auf dem Sperrbildschirm aufgenommene Fotos (nur lokal gespeichert)</li>
+
             </ul>
 
-            <h3>1.3 Informationen, die wir nicht sammeln</h3>
+            <h3>1.3 Technische Informationen und App-Berechtigungen</h3>
+            <p>Die App verwendet die folgenden Geräteberechtigungen für ihre Kernfunktionen:</p>
+            <ul>
+                <li><strong>Nutzungszugriff (PACKAGE_USAGE_STATS):</strong> Messung der App-Nutzungszeit</li>
+
+                <li><strong>Über anderen Apps anzeigen (SYSTEM_ALERT_WINDOW):</strong> Anzeige des Sperrbildschirms und Quiz-Overlays</li>
+                <li><strong>Beim Start ausführen (RECEIVE_BOOT_COMPLETED):</strong> Automatischer Neustart der Nutzungsüberwachung nach Geräteneustart</li>
+                <li><strong>Vordergrunddienst (FOREGROUND_SERVICE):</strong> Aufrechterhaltung der Nutzungsüberwachung im Hintergrund</li>
+                <li><strong>Internet (INTERNET):</strong> Laden von Quizdaten und Anzeige von Werbung</li>
+                <li><strong>Netzwerkstatus (ACCESS_NETWORK_STATE):</strong> Überprüfung der Netzwerkverbindung</li>
+            </ul>
+
+            <h3>1.4 Informationen, die wir nicht sammeln</h3>
             <ul>
                 <li>Persönliche Identifikationsinformationen</li>
-                <li>Standortdaten</li>
+                <li>GPS-Standortdaten</li>
                 <li>Kontakte oder Nachrichteninhalte</li>
             </ul>
 
@@ -541,6 +691,7 @@
                 <li>Messung und Anzeige der Smartphone-Nutzungszeit</li>
                 <li>Bereitstellung von Quizfragen bei Zeitüberschreitung</li>
                 <li>Speichern und Pflegen von Benutzereinstellungen</li>
+                <li>Verbesserung der App-Leistung und Stabilität</li>
             </ul>
 
             <h2>3. Datenspeicherung</h2>
@@ -550,8 +701,19 @@
             </ul>
 
             <h2>4. Drittanbieterdienste</h2>
-            <p>Die App zeigt Werbung über Google AdMob an. Für minderjährige Nutzer ist personalisierte Werbung gemäß COPPA-Richtlinie eingeschränkt.</p>
+
+            <h3>4.1 Werbung (Google AdMob)</h3>
+            <p>Die App zeigt Werbung über Google AdMob an. AdMob kann folgendes sammeln:</p>
+            <ul>
+                <li>Werbe-ID (Google Advertising ID)</li>
+                <li>Gerätekennungen und Geräteinformationen (Modell, OS-Version usw.)</li>
+                <li>IP-Adresse (kann zur ungefähren Standortschätzung verwendet werden)</li>
+                <li>Werbeinteraktionsdaten (Klicks, Impressionen usw.)</li>
+                <li>App-Aktivitätsdaten</li>
+            </ul>
+            <p>Für minderjährige Nutzer ist personalisierte Werbung gemäß COPPA-Richtlinie eingeschränkt.</p>
             <p>Mehr Infos: <a href="https://policies.google.com/privacy" target="_blank">Google Datenschutzrichtlinie</a></p>
+            <p>Wie Google Werbedaten verwendet: <a href="https://policies.google.com/technologies/ads" target="_blank">Google Werberichtlinie</a></p>
 
             <h2>5. Datensicherheit</h2>
             <ul>
@@ -560,16 +722,32 @@
                 <li>Verschlüsselte Datenspeicherung</li>
             </ul>
 
-            <h2>6. Datenschutz für Kinder</h2>
-            <p>Die App entspricht COPPA. Wir sammeln keine persönlichen Identifikationsinformationen von Kindern.</p>
+            <h2>6. Datenaufbewahrung und Löschung</h2>
+            <ul>
+                <li>Gerätedaten: Alle Daten werden sofort gelöscht, wenn die App deinstalliert wird.</li>
+                <li>Drittanbieterdaten (AdMob): Unterliegen der Aufbewahrungsrichtlinie des jeweiligen Dienstes. Siehe <a href="https://policies.google.com/privacy" target="_blank">Google Datenschutzrichtlinie</a> für Details.</li>
+                <li>Serverseitige Daten: Netzwerkprotokolle von Quizdatenanfragen werden aus Sicherheits- und Stabilitätsgründen maximal 90 Tage aufbewahrt und dann automatisch gelöscht.</li>
+            </ul>
 
-            <h2>7. Ihre Rechte</h2>
+            <h2>7. Datenschutz für Kinder</h2>
+            <p>Die App entspricht COPPA:</p>
+            <ul>
+                <li>Wir sammeln keine persönlichen Identifikationsinformationen von Kindern</li>
+                <li>Werbung für Kinder wird nicht personalisiert</li>
+                <li>Eltern oder Erziehungsberechtigte können die App-Einstellungen verwalten</li>
+            </ul>
+
+            <h2>8. Ihre Rechte</h2>
             <ul>
                 <li><strong>Datenlöschung:</strong> Das Deinstallieren der App löscht alle lokal gespeicherten Daten.</li>
                 <li><strong>Einstellungen zurücksetzen:</strong> Sie können Daten in den App-Einstellungen zurücksetzen.</li>
+                <li><strong>Werbe-ID zurücksetzen:</strong> Sie können Ihre Google Werbe-ID in den Geräteeinstellungen zurücksetzen oder personalisierte Werbung deaktivieren.</li>
             </ul>
 
-            <h2>8. Kontakt</h2>
+            <h2>9. Richtlinienänderungen</h2>
+            <p>Wenn sich diese Richtlinie ändert, werden wir Sie über die App oder diese Seite informieren. Wesentliche Änderungen werden vor der Umsetzung angekündigt.</p>
+
+            <h2>10. Kontakt</h2>
             <div class="contact">
                 <p><strong>E-Mail:</strong> kimchi830@gmail.com</p>
                 <p><strong>Entwickler:</strong> jiwhan.kim</p>
@@ -579,12 +757,12 @@
         <!-- Portuguese -->
         <div id="pt" class="section">
             <h1>Política de Privacidade do QuizLock</h1>
-            <p class="date">Data de vigência: 17 de janeiro de 2025</p>
+            <p class="date">Data de vigência: 17 de janeiro de 2025 | Última atualização: 21 de fevereiro de 2025</p>
 
             <p>QuizLock ("Aplicativo") valoriza sua privacidade e cumpre as regulamentações aplicáveis. Esta Política de Privacidade explica quais informações coletamos e como as utilizamos.</p>
 
             <h2>1. Informações que Coletamos</h2>
-            
+
             <h3>1.1 Informações Coletadas Automaticamente</h3>
             <ul>
                 <li><strong>Dados de Uso do Aplicativo:</strong> Acessamos estatísticas de uso de aplicativos do dispositivo para medir o tempo de uso do smartphone. Essas informações são armazenadas apenas no seu dispositivo.</li>
@@ -593,13 +771,25 @@
             <h3>1.2 Informações Fornecidas pelo Usuário</h3>
             <ul>
                 <li><strong>Configurações:</strong> Limites de tempo de uso, dificuldade do quiz, preferências de faixa etária</li>
-                <li><strong>Fotos de Reflexão:</strong> Fotos tiradas na tela de bloqueio (armazenadas localmente, nunca transmitidas)</li>
+
             </ul>
 
-            <h3>1.3 Informações que Não Coletamos</h3>
+            <h3>1.3 Informações Técnicas e Permissões do Aplicativo</h3>
+            <p>O aplicativo utiliza as seguintes permissões do dispositivo para fornecer suas funcionalidades principais:</p>
+            <ul>
+                <li><strong>Acesso de Uso (PACKAGE_USAGE_STATS):</strong> Medição do tempo de uso de aplicativos</li>
+
+                <li><strong>Exibir sobre outros apps (SYSTEM_ALERT_WINDOW):</strong> Exibição da tela de bloqueio e sobreposições de quiz</li>
+                <li><strong>Executar na inicialização (RECEIVE_BOOT_COMPLETED):</strong> Reinício automático do monitoramento após reinicialização do dispositivo</li>
+                <li><strong>Serviço em primeiro plano (FOREGROUND_SERVICE):</strong> Manutenção do monitoramento de uso em segundo plano</li>
+                <li><strong>Internet (INTERNET):</strong> Carregamento de dados de quiz e exibição de anúncios</li>
+                <li><strong>Estado da rede (ACCESS_NETWORK_STATE):</strong> Verificação da conectividade de rede</li>
+            </ul>
+
+            <h3>1.4 Informações que Não Coletamos</h3>
             <ul>
                 <li>Informações de identificação pessoal</li>
-                <li>Dados de localização</li>
+                <li>Dados de localização GPS</li>
                 <li>Contatos ou conteúdo de mensagens</li>
             </ul>
 
@@ -608,6 +798,7 @@
                 <li>Medir e exibir o tempo de uso do smartphone</li>
                 <li>Fornecer quizzes quando os limites de tempo são excedidos</li>
                 <li>Salvar e manter as configurações do usuário</li>
+                <li>Melhorar o desempenho e a estabilidade do aplicativo</li>
             </ul>
 
             <h2>3. Armazenamento de Dados</h2>
@@ -617,8 +808,19 @@
             </ul>
 
             <h2>4. Serviços de Terceiros</h2>
-            <p>O aplicativo exibe anúncios através do Google AdMob. Para usuários menores, a publicidade personalizada é restrita conforme a política COPPA.</p>
+
+            <h3>4.1 Publicidade (Google AdMob)</h3>
+            <p>O aplicativo exibe anúncios através do Google AdMob. O AdMob pode coletar:</p>
+            <ul>
+                <li>ID de publicidade (Google Advertising ID)</li>
+                <li>Identificadores do dispositivo e informações do dispositivo (modelo, versão do SO, etc.)</li>
+                <li>Endereço IP (pode ser usado para estimativa aproximada de localização)</li>
+                <li>Dados de interação com anúncios (cliques, impressões, etc.)</li>
+                <li>Dados de atividade do aplicativo</li>
+            </ul>
+            <p>Para usuários menores, a publicidade personalizada é restrita conforme a política COPPA.</p>
             <p>Mais informações: <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidade do Google</a></p>
+            <p>Como o Google usa dados de publicidade: <a href="https://policies.google.com/technologies/ads" target="_blank">Política de Anúncios do Google</a></p>
 
             <h2>5. Segurança de Dados</h2>
             <ul>
@@ -627,16 +829,32 @@
                 <li>Armazenamento de dados criptografado</li>
             </ul>
 
-            <h2>6. Privacidade das Crianças</h2>
-            <p>O aplicativo cumpre a COPPA. Não coletamos informações de identificação pessoal de crianças.</p>
+            <h2>6. Retenção e Exclusão de Dados</h2>
+            <ul>
+                <li>Dados no dispositivo: Todos os dados são excluídos imediatamente ao desinstalar o aplicativo.</li>
+                <li>Dados de serviços de terceiros (AdMob): Sujeitos à política de retenção do respectivo serviço. Consulte a <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidade do Google</a> para detalhes.</li>
+                <li>Dados do servidor: Registros de rede de solicitações de dados de quiz são mantidos por até 90 dias para segurança e estabilidade do serviço, depois excluídos automaticamente.</li>
+            </ul>
 
-            <h2>7. Seus Direitos</h2>
+            <h2>7. Privacidade das Crianças</h2>
+            <p>O aplicativo cumpre a COPPA:</p>
+            <ul>
+                <li>Não coletamos informações de identificação pessoal de crianças</li>
+                <li>Anúncios mostrados a crianças não são personalizados</li>
+                <li>Pais ou responsáveis podem gerenciar as configurações do aplicativo</li>
+            </ul>
+
+            <h2>8. Seus Direitos</h2>
             <ul>
                 <li><strong>Exclusão de Dados:</strong> Desinstalar o aplicativo exclui todos os dados armazenados localmente.</li>
                 <li><strong>Redefinir Configurações:</strong> Você pode redefinir os dados nas configurações do aplicativo.</li>
+                <li><strong>Redefinir ID de Publicidade:</strong> Você pode redefinir seu ID de publicidade do Google ou desativar anúncios personalizados nas configurações do dispositivo.</li>
             </ul>
 
-            <h2>8. Contato</h2>
+            <h2>9. Alterações na Política</h2>
+            <p>Se esta política for alterada, notificaremos você através do aplicativo ou desta página. Alterações significativas serão anunciadas antes da implementação.</p>
+
+            <h2>10. Contato</h2>
             <div class="contact">
                 <p><strong>E-mail:</strong> kimchi830@gmail.com</p>
                 <p><strong>Desenvolvedor:</strong> jiwhan.kim</p>
@@ -646,13 +864,9 @@
 
     <script>
         function showLang(lang) {
-            // Hide all sections
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-            // Remove active from all buttons
             document.querySelectorAll('.lang-switch button').forEach(b => b.classList.remove('active'));
-            // Show selected section
             document.getElementById(lang).classList.add('active');
-            // Activate button
             document.getElementById('btn-' + lang).classList.add('active');
         }
     </script>
